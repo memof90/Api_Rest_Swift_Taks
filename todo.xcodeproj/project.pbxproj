@@ -14,6 +14,9 @@
 		8DC4585B259A802B00134F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC4585A259A802B00134F0E /* Assets.xcassets */; };
 		8DC4585E259A802B00134F0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC4585C259A802B00134F0E /* LaunchScreen.storyboard */; };
 		8DC4586D259A862100134F0E /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC4586C259A862100134F0E /* TodoCell.swift */; };
+		8DC45871259A926800134F0E /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC45870259A926800134F0E /* Todo.swift */; };
+		8DC45874259A93AB00134F0E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC45873259A93AB00134F0E /* APIError.swift */; };
+		8DC45878259A944900134F0E /* NewtworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC45877259A944900134F0E /* NewtworkServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8DC4585D259A802B00134F0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC4585F259A802B00134F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC4586C259A862100134F0E /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		8DC45870259A926800134F0E /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		8DC45873259A93AB00134F0E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8DC45877259A944900134F0E /* NewtworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtworkServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		8DC45850259A802A00134F0E /* todo */ = {
 			isa = PBXGroup;
 			children = (
+				8DC45876259A942700134F0E /* Services */,
 				8DC45867259A859100134F0E /* Model */,
 				8DC45869259A85B200134F0E /* View */,
 				8DC4586B259A85C000134F0E /* Controller */,
@@ -74,6 +81,8 @@
 		8DC45867259A859100134F0E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8DC45870259A926800134F0E /* Todo.swift */,
+				8DC45873259A93AB00134F0E /* APIError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,6 +101,14 @@
 				8DC45855259A802A00134F0E /* TodoVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DC45876259A942700134F0E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DC45877259A944900134F0E /* NewtworkServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +185,9 @@
 				8DC45852259A802A00134F0E /* AppDelegate.swift in Sources */,
 				8DC45854259A802A00134F0E /* SceneDelegate.swift in Sources */,
 				8DC4586D259A862100134F0E /* TodoCell.swift in Sources */,
+				8DC45871259A926800134F0E /* Todo.swift in Sources */,
+				8DC45874259A93AB00134F0E /* APIError.swift in Sources */,
+				8DC45878259A944900134F0E /* NewtworkServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
