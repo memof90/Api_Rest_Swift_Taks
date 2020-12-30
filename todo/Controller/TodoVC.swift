@@ -32,7 +32,7 @@ class TodoVC: UIViewController {
         // function to solicitud newtwork api
         getTodos()
 //        fuction to post data
-        addTodos()
+       
     }
     
     
@@ -48,12 +48,14 @@ class TodoVC: UIViewController {
 
     }
     
-    func addTodos() {
-        NetworkService.shared.addTodos(todo: Todo(item: "Test", priority: 2)) { (todos) in
+    func addTodos( todo: Todo) {
+        NetworkService.shared.addTodos(todo: todo) { (todos) in
             debugPrint(todos)
+            self.todoItemTxt.text = ""
             self.todos = todos.items
             self.todoTable.reloadData()
         } onError: { (errorMessage) in
+//            show any errors to user on POST
             debugPrint(errorMessage)
         }
 
@@ -61,7 +63,13 @@ class TodoVC: UIViewController {
     
     //    MARK: IBAction
     @IBAction func addTodo(_ sender: Any) {
+        guard let todoItem = todoItemTxt.text else {
+//            show error
+            return
+        }
         
+        let todo = Todo(item: todoItem, priority: prioritySegment.selectedSegmentIndex)
+        addTodos(todo: todo)
     }
     
 }
