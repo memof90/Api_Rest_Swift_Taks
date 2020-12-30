@@ -31,12 +31,25 @@ class TodoVC: UIViewController {
         todoTable.dataSource = self
         // function to solicitud newtwork api
         getTodos()
+//        fuction to post data
+        addTodos()
     }
     
     
 //    MARK: Fucntions
     func getTodos(){
         NetworkService.shared.getTodos { (todos) in
+            debugPrint(todos)
+            self.todos = todos.items
+            self.todoTable.reloadData()
+        } onError: { (errorMessage) in
+            debugPrint(errorMessage)
+        }
+
+    }
+    
+    func addTodos() {
+        NetworkService.shared.addTodos(todo: Todo(item: "Test", priority: 2)) { (todos) in
             debugPrint(todos)
             self.todos = todos.items
             self.todoTable.reloadData()
