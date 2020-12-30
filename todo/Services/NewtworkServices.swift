@@ -21,7 +21,7 @@ class NetworkService {
     
     let session = URLSession(configuration: .default)
     
-    func getTodos(onSucees: @escaping (Todos) -> Void) {
+    func getTodos(onSucees: @escaping (Todos) -> Void, onError: @escaping (String) -> Void) {
         let url = URL(string: "\(URL_BASE)")!
 
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -30,12 +30,12 @@ class NetworkService {
 //            para hacer solictidus URLSession de manera asyncrona y cuyas tareas se ejecuten en segundo plano
             DispatchQueue.main.async {
                 if let error = error {
-                    debugPrint(error.localizedDescription)
+                    onError(error.localizedDescription)
                     return
                 }
                 
                 guard let data = data, let response = response as? HTTPURLResponse else {
-                    debugPrint("Invalid data or response")
+                    onError("Invalid data or response")
                     return
                 }
                 
@@ -52,11 +52,11 @@ class NetworkService {
         //                show error to user
                         let err = try JSONDecoder().decode(APIError.self, from: data)
     //                    handle erorr
-                        
+                        onError(err.message)
                     }
                     
                 } catch {
-                    debugPrint(error.localizedDescription)
+                    onError(error.localizedDescription)
                 }
             }
         }

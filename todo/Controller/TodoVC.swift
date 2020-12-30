@@ -40,7 +40,10 @@ class TodoVC: UIViewController {
             debugPrint(todos)
             self.todos = todos.items
             self.todoTable.reloadData()
+        } onError: { (errorMessage) in
+            debugPrint(errorMessage)
         }
+
     }
     
     //    MARK: IBAction
