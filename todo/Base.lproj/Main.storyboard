@@ -46,29 +46,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy a dozen eggs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY2-c5-ATv">
-                                                    <rect key="frame" x="11" y="0.0" width="135.5" height="54.5"/>
+                                                    <rect key="frame" x="11" y="0.0" width="183" height="54.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okh-at-SrB">
-                                                    <rect key="frame" x="165.5" y="11" width="188.5" height="41"/>
+                                                    <rect key="frame" x="304" y="7" width="50" height="50"/>
                                                     <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="fV8-tV-CWG"/>
-                                                        <constraint firstAttribute="height" constant="40" id="mUm-Rz-iSl"/>
+                                                        <constraint firstAttribute="width" constant="50" id="fV8-tV-CWG"/>
+                                                        <constraint firstAttribute="height" constant="50" id="mUm-Rz-iSl"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SY2-c5-ATv" firstAttribute="top" secondItem="Msg-CR-aMq" secondAttribute="top" id="9fE-zt-Erh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="okh-at-SrB" secondAttribute="bottom" constant="2" id="H7w-Db-ncw"/>
-                                                <constraint firstItem="okh-at-SrB" firstAttribute="centerX" secondItem="SY2-c5-ATv" secondAttribute="centerX" id="Jht-kp-RZq"/>
-                                                <constraint firstItem="okh-at-SrB" firstAttribute="leading" secondItem="SY2-c5-ATv" secondAttribute="trailing" constant="19" id="S8C-3e-5Cu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="okh-at-SrB" secondAttribute="bottom" constant="-3" id="H7w-Db-ncw"/>
+                                                <constraint firstItem="okh-at-SrB" firstAttribute="centerX" secondItem="SY2-c5-ATv" secondAttribute="centerX" constant="226.5" id="Jht-kp-RZq"/>
+                                                <constraint firstItem="okh-at-SrB" firstAttribute="leading" secondItem="SY2-c5-ATv" secondAttribute="trailing" constant="110" id="S8C-3e-5Cu"/>
                                                 <constraint firstAttribute="bottom" secondItem="SY2-c5-ATv" secondAttribute="bottom" constant="10.5" id="UUU-0f-UPU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="okh-at-SrB" secondAttribute="trailing" id="YDg-28-vy5"/>
                                                 <constraint firstItem="SY2-c5-ATv" firstAttribute="leading" secondItem="Msg-CR-aMq" secondAttribute="leading" constant="11" id="dyw-gZ-nBc"/>
-                                                <constraint firstItem="okh-at-SrB" firstAttribute="top" secondItem="Msg-CR-aMq" secondAttribute="topMargin" id="xh0-J8-Oco"/>
+                                                <constraint firstItem="okh-at-SrB" firstAttribute="top" secondItem="Msg-CR-aMq" secondAttribute="topMargin" constant="-4" id="xh0-J8-Oco"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -107,6 +107,7 @@
                     <connections>
                         <outlet property="prioritySegment" destination="7lq-1Y-Crh" id="uFt-dL-NPS"/>
                         <outlet property="todoItemTxt" destination="blJ-01-QlS" id="6aC-HA-qIY"/>
+                        <outlet property="todoTable" destination="vG9-hn-ksD" id="EGE-Tt-6mf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
